@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  agente-om:
+    build: .
+    container_name: agente-om
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./omsentinel.db:/app/omsentinel.db
